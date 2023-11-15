@@ -1,0 +1,72 @@
+
+*{
+    margin:0;
+    padding: 0;
+ 
+}
+body{
+    background-image: url("OIP.jpg");
+    }
+
+nav{
+    background-color:burlywood;
+    color: black;
+    height: 50px;
+    font-size: 20px;
+    display: flex;
+align-items: center;
+padding: 0 12px;
+font-family: 'Roboto', sans-serif;}
+
+nav ul{
+    list-style: none;
+}
+.gamecontainer{
+    
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.container{
+    display: grid;
+    grid-template-rows:repeat(3,10vw) ;
+    grid-template-columns:repeat(3,10vw);
+}
+.imgbox img{
+    height: min-content;
+    width: 100px;
+    display: none;
+}
+.gameinfo {
+    padding: 0 34px;
+}
+
+.box{border: 2px solid white;
+    background-color: rgb(236, 176, 97);
+font-size: 8vw;
+display: flex;
+justify-content: center;
+align-items: center;}
+
+.box:hover{
+background-color: rgb(236, 224, 248);
+cursor: pointer;}
+
+.br-0{
+border-right: 0;
+}
+.bl-0{
+    border-left: 0;
+}
+.bt-0{
+    border-top: 0;
+}
+.bb-0{
+    border-bottom: 0;
+}
+#id{
+    border-radius: 20px;
+    padding: 10px;
+    background-color: bisque;
+    
+}
