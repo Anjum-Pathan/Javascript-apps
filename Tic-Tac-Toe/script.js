@@ -15,6 +15,10 @@ const changeTurn = () => {
 
 // Function to check win
 const checkWin = () => {
+    let (boxtext)=>
+    {
+        
+    }
    
 }
 
