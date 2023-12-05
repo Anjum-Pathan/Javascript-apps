@@ -34,8 +34,10 @@ nav ul{
 }
 .imgbox img{
     height: min-content;
-    width: 100px;
-    display: none;
+    width: 150px;
+    padding: 10px;
+    width:0;
+    transition: width 1s ease-in-out;
 }
 .gameinfo {
     padding: 0 34px;
@@ -70,3 +72,22 @@ border-right: 0;
     background-color: bisque;
     
 }
+/* Media Query for smaller screens */
+/* @media (max-width: 600px) {
+    .gamecontainer {
+        margin-top: 20px;
+    }
+
+    .container {
+        grid-template-rows: repeat(3, minmax(20vw, 1fr));
+        grid-template-columns: repeat(3, minmax(20vw, 1fr));
+    }
+
+    .box {
+        font-size: 15vw;
+    }
+
+    .imgbox img {
+        width: 100px;
+    }
+} */
