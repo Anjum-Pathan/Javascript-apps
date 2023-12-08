@@ -1,0 +1,17 @@
+.container{
+ text-align: center;
+padding: 20vw;
+
+}
+.btn{
+    width: 30vh;
+    padding: 15vh;
+    border:2px solid black;
+    ;
+}
+.row1{
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 10px;
+    text-align: center;
+}
