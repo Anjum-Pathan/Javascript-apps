@@ -23,10 +23,12 @@ cursor:pointer;
     text-align: center;
     margin:12px;
    color: white;
-   font-size: medium;
+   font-size: 20px;
+   border: none;
   
     box-sizing: border-box;
-    border-radius: 90px;
+    border-radius:50%;
+    width:50px;
    background:transparent;}
 
 
@@ -44,9 +46,39 @@ cursor:pointer;
   }
   .row1 button{
     color:black;
-    background-color: rgb(184, 178, 178);
+    background-color: rgb(147, 145, 145);
+  
   }
-#divide{
-  background-color: orangered;
-}
-
+  .row2 button{
+    color:white;
+    background-color: rgb(53, 51, 51);
+  }
+  
+  .row3 button{
+    color:white;
+    background-color: rgb(53, 51, 51);
+  }
+  .row4 button{
+    color:white;
+    background-color: rgb(53, 51, 51);
+  }
+#percent{
+  background-color: #FFA500;
+ 
+color: white;}
+#mult{
+  background-color: #FFA500;
+ 
+color: white;}
+#add{
+  background-color: #FFA500;
+ 
+color: white;}
+#minus{
+  background-color: #FFA500;
+ 
+color: white;}
+#equal{
+  background-color: #FFA500;
+ 
+color: white;}
