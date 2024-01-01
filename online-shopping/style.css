@@ -63,12 +63,12 @@ padding-top:100px ;
 }
 
 
-.card img {
-    width: 150px; 
-    height: auto;
+.section1 img{
+    height: 46%;
+    width: 100hw;
 }
 .card-details {
-    padding: 15px;
+    padding: 20px;
     flex: 1;
 }
 
@@ -79,6 +79,7 @@ padding-top:100px ;
 .card-details p {
     color: #555;
 }
+
 
 .card-details a {
     display: inline-block;
