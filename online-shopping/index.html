@@ -6,6 +6,7 @@
     <title>Online Shopping for Kids Fashion $ Lifestyles - SMT </title>
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="utils.css">
+
 </head>
 <body>
     <header class="container">
@@ -38,35 +39,90 @@
             </div>
         </nav>
     </header>
+    <!-- slide show -->
 
     <section class="container section1">
-        <img src="./image/collageware.png" alt="Card Image">
-        <div class="card-details">
-            <h2>Collegewear</h2>
-            <p>UP TO 50% OFF</p>
-            <a href="#">+Explore</a>       
-         </div>
-        <img src="./image/Tops.png" alt="Card Image">
-        <div class="card-details">
-            <h2>TOPS & TEES</h2>
-            <p>Under 699</p>
-            <a href="#">+Explore</a>
+        <div class="slide">
+            <img src="./image/collageware.png" alt="Card Image">
+            <div class="card-details">
+                <h2>Collegewear</h2>
+                <p>UP TO 50% OFF</p>
+                <a href="./boys.html">+Explore</a>       
+            </div>
         </div>
-        <img src="./image/Activewareimg.png" alt="Card Image">
-        <div class="card-details">
-            <h2>Activewear</h2>
-            <p>40-70% OFF</p>
-            <a href="#">+ Explore</a>
+        <div class="slide">
+            <img src="./image/Tops.png" alt="Card Image">
+            <div class="card-details">
+                <h2>TOPS & TEES</h2>
+                <p>Under 699</p>
+                <a href="#">+Explore</a>
+            </div>
         </div>
-        <img src="./image/family.png" alt="Card Image">
-        <div class="card-details">
-            <h2>Family</h2>
-            <p>20-30% OFF</p>
-            <a href="#">+Explore</a>
+        <div class="slide">
+            <img src="./image/Activewareimg.png" alt="Card Image">
+            <div class="card-details">
+                <h2>Activewear</h2>
+                <p>40-70% OFF</p>
+                <a href="#">+ Explore</a>
+            </div>
         </div>
-      
+        <div class="slide">
+            <img src="./image/family.png" alt="Card Image">
+            <div class="card-details">
+                <h2>Family</h2>
+                <p>20-30% OFF</p>
+                <a href="#">+Explore</a>
+            </div>
+        </div>
+   </section>
+   <section class="coupen">
+    <img src="./image/coupen.png" alt="Coupon Image" >
     </section>
-   
-<script src="script.js"></script>
+    <section class="catcard">
+        <h2><span class="uppercase">SHOP BY</span> <span class="cursive">Category</span></h2>
+            <div class="small-card">
+                <div class="card-image" >
+                    <img src="./image/shop cat/Activeware_cat.png" alt="Actiware off">
+                </div>
+                <div class="card-description">
+                    <p>Line 1 of the description</p>
+                    <p>Line 2 of the description</p>
+                </div>
+            </div>
+        
+        
+    </section>
+    
+
+
+
+    <script>
+        let currentIndex = 0;
+        const slides = document.querySelectorAll('.section1 > .slide');
+        const totalSlides = slides.length;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                if (i === index) {
+                    slide.style.display = 'block';
+                } else {
+                    slide.style.display = 'none';
+                }
+            });
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            showSlide(currentIndex);
+        }
+
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+            showSlide(currentIndex);
+        }
+
+        // Set interval for automatic slideshow change
+        setInterval(nextSlide, 5000); // Change slide every 5 seconds
+    </script>
 </body>
 </html>
