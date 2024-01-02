@@ -112,6 +112,9 @@ padding-top:20px ;
     margin-top: -15%;
 }
 /*category card*/
+.catcard{
+    background-color: rgb(235, 250, 250);
+}
 .catcard h2 {
     text-align: center;
     padding: 15px;
@@ -124,6 +127,8 @@ padding-top:20px ;
 
 .cursive {
     font-style: italic;
+
+
 }
 .small-card{
    border: 1px solid none;
@@ -147,4 +152,42 @@ padding: 20px;
 .card-description p,h4{
     text-align: center;
     line-height: 0.01;
+}
+
+.offercoupen{
+    color: white;
+    background-color:#FF6562;
+   
+}
+.offercoupen {
+    font-style: italic;
+    }
+ /*footer section*/
+
+  footer{
+    display: flex;
+flex-direction: row;
+justify-content: space-evenly;
+line-height: 2.1;
+background-color: antiquewhite;
+
+  }
+  footer a,ul {
+    text-decoration: none;
+    list-style: none;
+    color: black;
+    font-size: small;
+}
+footer ul li{
+    font-size: smaller;
+    color: rgb(123, 118, 118);
+    text-align: center;
+
+}
+.social_media li {
+    display:inline-block;
+padding-top: 10%;
+   
+   
+  
 }
