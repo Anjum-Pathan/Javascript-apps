@@ -55,11 +55,13 @@ nav ul li{
     padding: 0 12px;
 }
 /*slider*/
+
 .section1{
 min-height: 122vh;
 overflow: hidden;
 background-color: #f2f2f2;
 display: flex;
+
 padding-top:20px ;
 
 }
@@ -68,6 +70,7 @@ padding-top:20px ;
     width: 100hw;
 }
 .card-details {
+    
     padding: 10px;
     flex: 1;
 }
@@ -105,7 +108,7 @@ padding-top:20px ;
 
 .coupen img {
     width: 70%;
-    max-width: 100%; /* Ensures the image doesn't exceed its natural size */
+    max-width: 100%; 
     margin-top: -15%;
 }
 /*category card*/
@@ -122,22 +125,26 @@ padding-top:20px ;
 .cursive {
     font-style: italic;
 }
-.catcard {
+.small-card{
+   border: 1px solid none;
+    box-sizing: border-box;
+    width: fit-content;
+    height: 10%;
+    background-color: #d5e77a;
+
+}
+.card-image{
+padding: 20px;
+}
+.Categorycard{
+    display: flex;
+    flex-wrap:wrap ;
+    justify-content: space-evenly;
+   gap: 10px;
+    
+  
+}
+.card-description p,h4{
     text-align: center;
+    line-height: 0.01;
 }
-
-.small-card {
-    display: inline-block;
-    margin: 10px;
-}
-
-.card-image {
-    height: 100px;
-    width: 100%; 
-}
-
-.card-description {
-    text-align: center;
-    padding: 10px;
-}
-
