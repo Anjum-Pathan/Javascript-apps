@@ -3,8 +3,9 @@
 <head>
     <!-- Include your meta tags, title, and CSS links -->
     <link rel="stylesheet" href="men.css">
+    <script src="./men.js"></script>
     <link rel="stylesheet" href="utils.css">
-    <link rel="stylesheet" href="style.css">
+  
 </head>
 <body>
     <header class="container">
@@ -31,97 +32,199 @@
                     <div>WishList</div></a> 
                 </div>
                 <div class="bag mx-2">    
-                   <a href=""> <img src="./image/shopping-bag.png" alt="">            
+                   <a href="./shopping_cart.html"> <img src="./image/shopping-bag.png" alt="">            
             <div>Bag</div></a>
             </div>
         </nav>
     </header>
 
+
+    <!-- section-->
     <section class="men-ware">
-        <!-- Men's Wear Filter Section -->
-        <div class="filter-section">
-            <!-- Filter options for Men and Boys -->
-            <div class="filter-men-boys">
-                <div class="filter-heading">
-                <h3>FILTER</h3>
-                <div>
-                <input type="checkbox" id="kurta-set" name="category" value="Kurta Set">
-               <label for="clear all">Clear All</label></div>
-              
-            </div>
-                 <input type="radio" id="men" name="men">
-                <label for="men">Mens</label>
-                <input type="radio" id="boys" name="boys">
-                <label for="boys">Boys</label>
-             
-            </div>
-
-            <!-- Filter options for Categories -->
-            <div class="filter-category">
-                <p>CATEGORIES</p>
-                <input type="checkbox" id="kurta-set" name="category" value="Kurta Set">
-                <label for="kurta-set">Kurta Set</label> <br>
-
-                <input type="checkbox" id="kurtas" name="category" value="Kurta">
-                <label for="kurta ">Kurtas</label><br>
-                <input type="checkbox" id="Nehru-Jackets" name="category" value="Nehru-Jackets">
-                <label for="Nehru-Jackets">Nehru Jackets</label><br>
-                <input type="checkbox" id="Shirts" name="category" value="Shirts">
-                <label for="Shirts">Shirts</label><br>
-                <input type="checkbox" id="Pants" name="category" value="Pants">
-                <label for="Pants">Jeans</label><br>
-                <input type="checkbox" id="Night-Dress" name="category" value="Night Dress">
-                <label for="Night Dress">Night Dress</label>
-            </div>
-            <div class="filter-price">
-                <p>PRICE</p>
-                <input type="checkbox" id="price1" name="category" value="">
-                <label for="">Rs. 150 to Rs.250</label><br>
-                <input type="checkbox" id="price1" name="category" value="">
-                <label for="">Rs. 250 to Rs.350</label><br>
-                <input type="checkbox" id="price1" name="category" value="">
-                <label for="">Rs. 450 to Rs.650</label><br>
-                <input type="checkbox" id="price1" name="category" value="">
-                <label for="">Rs. 750 to Rs.1000</label><br>
-               </div>
-
- <div class="filter-discount">
-                <p>DISCOUNT RANGE</p>
-                <input type="radio" id="discount10" name="discount">
-                <label for="10%">10% and above</label><br>
-                
-                <input type="radio" id="discount20" name="discount">
-                <label for="20%">20% and above</label><br>
-                
-                <input type="radio" id="discount30" name="discount">
-                <label for="30%">30% and above</label><br>
-                
-
-                <input type="radio" id="discount40" name="discount">
-
-                <label for="40%">40% -50% and above</label><br>
-                
-                <input type="radio" id="discount70" name="discount">
-                <label for="60%">60% -70% and above</label><br>
-                
-                <input type="radio" id="discount70" name="discount">
-                <label for="80%">80% and above</label><br>
-            </div>
-            </div>
-         
-    </section>
-    <div class="filter-size">
-        <p id="size-heading">SIZE</p>
-        <div id="size-options" class="hidden">
-            <input type="checkbox" id="size-s" name="size" value="S">
-            <label for="size-s">S</label>
-            <input type="checkbox" id="size-m" name="size" value="M">
-            <label for="size-m">M</label>
-            <input type="checkbox" id="size-l" name="size" value="L">
-            <label for="size-l">L</label>
-            <!-- Add more sizes as needed -->
-        </div>
-    </div>
+        <aside>
+            <div class="filter-section">
+              <div class="filter-heading">
+                    <h3>FILTER</h3>
+                    <div class="dropdown">
+                  <select name="select" multiple multiselect-search="true" multiselect-select-all="true" >
+                    <option value="">Catagory</option>
+                    <option value="">Price</option>
+                    <option value="">Discount Price</option>
+                  </select>
+                  </div>
+              </div>
+              <div class="boys-men">
+                <input type="radio" id="men" name="men">
+               <label for="men">Mens</label>
+               <input type="radio" id="boys" name="boys">
+               <label for="boys">Boys</label>
+           </div>
     
+                <!-- Filter options for Categories -->
+                <div class="filter-category">
+                    <p>CATEGORIES</p>
+                    <input type="checkbox" id="kurta-set" name="category" value="Kurta Set">
+                    <label for="kurta-set">Kurta Set</label> <br>
+    
+                    <input type="checkbox" id="kurtas" name="category" value="Kurta">
+                    <label for="kurta ">Kurtas</label><br>
+                    <input type="checkbox" id="T-shirts" name="category" value="T-shirts">
+                    <label for="Nehru-Jackets">T-shirts</label><br>
+                    <input type="checkbox" id="Shirts" name="category" value="Shirts">
+                    <label for="Shirts">Shirts</label><br>
+                    <input type="checkbox" id="Pants" name="category" value="Pants">
+                    <label for="Pants">Jeans</label><br>
+                    <input type="checkbox" id="Night-Dress" name="category" value="Night Dress">
+                    <label for="Night Dress">Night Dress</label>
+                </div>
+                <div class="filter-price">
+                    <p>PRICE</p>
+                    <input type="checkbox" id="price1" name="category" value="">
+                    <label for="">Rs. 150 to Rs.250</label><br>
+                    <input type="checkbox" id="price1" name="category" value="">
+                    <label for="">Rs. 250 to Rs.350</label><br>
+                    <input type="checkbox" id="price1" name="category" value="">
+                    <label for="">Rs. 450 to Rs.650</label><br>
+                    <input type="checkbox" id="price1" name="category" value="">
+                    <label for="">Rs. 750 to Rs.1000</label><br>
+                   </div>
+    
+     <div class="filter-discount">
+                    <p>DISCOUNT RANGE</p>
+                    <input type="radio" id="discount10" name="discount">
+                    <label for="10%">10% and above</label><br>
+                    
+                    <input type="radio" id="discount20" name="discount">
+                    <label for="20%">20% and above</label><br>
+                    
+                    <input type="radio" id="discount30" name="discount">
+                    <label for="30%">30% and above</label><br>
+                    
+    
+                    <input type="radio" id="discount40" name="discount">
+    
+                    <label for="40%">40% -50% and above</label><br>
+                    
+                    <input type="radio" id="discount70" name="discount">
+                    <label for="60%">60% -70% and above</label><br>
+                    
+                    <input type="radio" id="discount70" name="discount">
+                    <label for="80%">80% and above</label><br>
+                </div>
+                </div>
+                
+        </aside>
+        <main class="card-section">
+            <select name="select" multiple multiselect-search="true" multiselect-select-all="true">
+                <option value="">S</option>
+                 <option value="">M</option>
+                 <option value="">L</option>
+                 <option value="">XL</option>
+                 <option value="">XXL</option>
+                 <option value="">XXL</option>
+                 
+               </select>
+                 <div class="mensware-card">
+                 <div class="small-card">
+                     <div class="card-image" >
+                         <img src="./image/Mens card/Anouk.png" alt="kurti set">
+                     </div>
+                     <a href="">
+                         <div class="card-description">
+                         <h4>Anouk</h4>
+                         <p>Embroidered Kurta set</p>
+                         <p>₹499</p>
+                         <button onclick="addToShoppingBag('Anouk', 'Geometric Chikankari Embroidered Kurta With Pyjamas', '₹499')">SHOP NOW</button>
+                     </div>  </a>
+                 </div>
+                 <div class="small-card">
+                     <div class="card-image" >
+                         <img src="./image/Mens card/Jompers.png" alt="Jompers">
+                     </div>
+                     <a href="#">
+                         <div class="card-description">
+                         <h4>Jompers</h4>
+                         <p>Pure Cotton Kurta with Pyjamas</p>
+                         <p>₹799</p>
+                         <button onclick="addToShoppingBag('Jompers','Pure Cotton kurtas with pyjamas','₹799')">SHOP NOW</button>
+                     </div></a>
+                 </div>
+                 <div class="small-card">
+                     <div class="card-image" >
+                         <img src="./image/Mens card/Jompers1.png" alt="Jompers">
+                     </div>
+                     <a href="#">
+                         <div class="card-description">
+                         <h4>Jompers</h4>
+                         <p>Pure Cotton Kurtaset</p>
+                         <p>₹699</p>
+                         <button>SHOP NOW</button>
+                     </div></a>
+                 </div>
+                 <div class="small-card">
+                     <div class="card-image" >
+                         <img src="./image/Mens card/Jomperskurtas.png" alt="Jompers">
+                     </div>
+                     <a href="#">
+                         <div class="card-description">
+                         <h4>Jompers</h4>
+                         <p>Kurtaset</p>
+                         <p>₹599</p>
+                         <button>SHOP NOW</button>
+                     </div></a>
+                 </div>
+                 <div class="small-card">
+                     <div class="card-image" >
+                         <img src="./image/Mens card/tshirt2.png" alt="T-shirts">
+                     </div>
+                     <a href="#">
+                         <div class="card-description">
+                         <h4>T-shirt</h4>
+                         <p>Casual T-shirt</p>
+                         <p>₹199</p>
+                         <button>SHOP NOW</button>
+                     </div></a>
+                 </div>
+                 <div class="small-card">
+                     <div class="card-image" >
+                         <img src="./image/Mens card/Tshirt3.png" alt="kurtas">
+                     </div>
+                    
+                         <a href="#">
+                             <div class="card-description">
+                             <h4>Toxoc</h4>
+                             <p>Casual</p>
+                             <p>₹199</p>
+                             <button>SHOP NOW</button>
+                         </div></a>
+                 </div>
+                 <div class="small-card">
+                     <div class="card-image" >
+                         <img src="./image/Mens card/Puma.png" alt="kurtas">
+                     </div>
+                     <a href="#">
+                         <div class="card-description">
+                         <h4>pumma</h4>
+                         <p>Casual</p>
+                         <p>₹199</p>
+                         <button>SHOP NOW</button>
+                     </div></a>
+                 </div>
+                 <div class="small-card">
+                     <div class="card-image" >
+                         <img src="./image/Mens card/Bullmer.png" alt="kurtas">
+                     </div>
+                     <a href="#">
+                         <div class="card-description">
+                         <h4>Parada</h4>
+                         <p>Over Size T-shirt</p>
+                         <p>₹199</p>
+                         <button>SHOP NOW</button>
+                     </div></a>
+                 </div>
+             </div>
+         </div>
+        </main>
+        </section>
 </body>
 </html>

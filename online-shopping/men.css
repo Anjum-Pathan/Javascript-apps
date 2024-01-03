@@ -1,7 +1,64 @@
-.filter-heading {
+header{
+    box-shadow: rgba(0,0,0,0.35) 0px 5px 15px;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    height: 77px;
+   }
+   nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+.searchbar{
+    width:18vw;
+    padding: 4px 10px;
+    border: 0.5px solid grey;
+    background-color: #f7f8fd;
+    border-radius: 5px;
+}
+.profile,
+.wishlist,
+.bag {
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    }
+
+ .right img  {
+   height: 15px;
+    width: 15px;
+   
+   }
+   .profile a,
+   .wishlist a,
+   .bag a {
+       text-decoration: none; 
+       color: inherit; 
+      }
+.left img{
+    width: 50px;
+    height: 60px;
+}
+nav{
+    font-size: 12px;
+    font-weight: bold;
+padding-top: 12px;}
+
+
+.container{
+   padding: 0 14vw;
+   ;
+ }
+nav ul li{
+    list-style: none;
+    padding: 0 12px;
+}
+/*filter heading*/
+
+.filter-heading h3,.dropdown{
+    display: flex;
+    justify-content: space-evenly;
     align-items: center;
+    padding-right: 30px;
 }
 
 .filter-heading h3 {
@@ -9,8 +66,8 @@
 }
 .filter-section {
     margin-top: 50px;
-    border: 1px solid #ccc;
-    width: 20%;
+    
+   
 }
 
 .filter-men-boys,
@@ -30,17 +87,183 @@ font-size:14px;
 font-weight: bold;
 
 }
+.men-ware{
+    display: flex;
+    align-items:normal;
+    }
+.filter-size p,#size-options{
+   padding-top: 25px;
+    padding-left: 50px;
+                                     
+}
+select{
+    width:7em;
+    
+   }
+   .card-section select{
+    margin: 30px;
+   }
+.multiselect-dropdown{
+   
+    margin-top: 40px;
+    left :40px;
+    margin-bottom: 30px;
+    display: inline-block;
+    padding: 2px 5px 0px 5px;
+    border-radius: 4px;
+    border: solid 1px #ced4da;
+    background-color: white;
+    position: relative;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right .75rem center;
+    background-size: 16px 12px;
+  }
+  .multiselect-dropdown span.optext, .multiselect-dropdown span.placeholder{
+    margin-right:0.5em; 
+    margin-bottom:2px;
+    padding:1px 0; 
+    border-radius: 4px; 
+    display:inline-block;
+  }
+  .multiselect-dropdown span.optext{
+    background-color:lightgray;
+    padding:1px 0.75em; 
+  }
+  .multiselect-dropdown span.optext .optdel {
+    float: right;
+    margin: 0 -6px 1px 5px;
+    font-size: 0.7em;
+    margin-top: 2px;
+    cursor: pointer;
+    color: #666;
+  }
+  .multiselect-dropdown span.optext .optdel:hover { color: #c66;}
+  .multiselect-dropdown span.placeholder{
+    color:#ced4da;
+  }
+  .multiselect-dropdown-list-wrapper{
+    box-shadow: gray 0 3px 8px;
+    z-index: 100;
+    padding:2px;
+    border-radius: 4px;
+    border: solid 1px #ced4da;
+    display: none;
+    margin: -1px;
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    background: white;
+  }
+  .multiselect-dropdown-list-wrapper .multiselect-dropdown-search{
+    margin-bottom:5px;
+  }
+  .multiselect-dropdown-list{
+    padding:2px;
+    height: 15rem;
+    overflow-y:auto;
+    overflow-x: hidden;
+  }
+  .multiselect-dropdown-list::-webkit-scrollbar {
+    width: 6px;
+  }
+  .multiselect-dropdown-list::-webkit-scrollbar-thumb {
+    background-color: #bec4ca;
+    border-radius:3px;
+  }
+  
+  .multiselect-dropdown-list div{
+    padding: 5px;
+  }
+  .multiselect-dropdown-list input{
+    height: 1.15em;
+    width: 1.15em;
+    margin-right: 0.35em;  
+  }
+  .multiselect-dropdown-list div.checked{
+  }
+  .multiselect-dropdown-list div:hover{
+    background-color: #ced4da;
+  }
+  .multiselect-dropdown span.maxselected {width:100%;}
+  .multiselect-dropdown-all-selector {border-bottom:solid 1px #999;}
 
 
+/* Aside Styles */
+aside {
+    margin-top: 40px;
+    height: 50%;
+    width: 20%;
+    padding: 10px;
+    background-color: #ebebeb;
+    border: 1px solid rgb(202, 197, 197);
+}
 
+.filter-section {
+    margin-bottom: 20px;
+}
 
+.filter-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
 
+.boys-men input {
+    margin-right: 5px;
+}
 
+.filter-category,
+.filter-price,
+.filter-discount {
+    margin-top: 10px;
+}
+/* CSS for the card section */
+.mensware-card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    padding-left: 30px;
+}
 
+.small-card {
+    width: calc(25% - 20px); 
+    box-sizing: border-box;
+}
 
+/* Adjust styles for better spacing and alignment */
+.card-description {
+    text-align: center;
+}
+
+.card-description h4 {
+    margin: 10px 0;
+}
+
+.card-description p {
+    margin: 5px 0;
+}
+
+.card-description button {
+    padding: 5px 10px;
+    background-color: #5597df;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Optional: Add styles for image size */
+.card-image img {
+    width: 100%;
+    height: auto;
+}
+.small-card a{
+text-decoration: none;
+color: inherit;
+}
 
 
    
-
-
-
