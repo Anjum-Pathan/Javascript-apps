@@ -1,0 +1,43 @@
+.filter-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filter-heading h3 {
+    margin: 10px; 
+}
+.filter-section {
+    margin-top: 50px;
+    border: 1px solid #ccc;
+    width: 20%;
+}
+
+.filter-men-boys,
+.filter-category,
+.filter-price,
+.filter-discount {
+    margin-bottom: 20px;
+    padding-bottom: 40px;
+    border-bottom:1px solid gray;
+
+}
+.filter-men-boys p,
+.filter-category p,
+.filter-price p,
+.filter-discount p{
+font-size:14px;
+font-weight: bold;
+padding: 10px;
+}
+
+
+
+
+
+
+
+   
+
+
+
