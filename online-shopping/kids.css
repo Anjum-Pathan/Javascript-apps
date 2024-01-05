@@ -1,0 +1,146 @@
+html,body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+header{
+    box-shadow: rgba(0,0,0,0.35) 0px 5px 15px;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    height: 77px;
+   }
+   nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+.searchbar{
+    width:18vw;
+    padding: 4px 10px;
+    border: 0.5px solid grey;
+    background-color: #f7f8fd;
+    border-radius: 5px;
+}
+.profile,
+.wishlist,
+.bag {
+    display: flex;
+    flex-direction: row;
+    }
+
+ .right img  {
+   height: 15px;
+    width: 15px;
+   
+   }
+   .profile a,
+   .wishlist a,
+   .bag a {
+       text-decoration: none; 
+       color: inherit; 
+      }
+.left img{
+    width: 50px;
+    height: 60px;
+}
+nav{
+    font-size: 12px;
+    font-weight: bold;
+padding-top: 12px;}
+
+
+.container{
+   padding: 0 14vw;
+   ;
+ }
+nav ul li{
+    list-style: none;
+    padding: 0 12px;
+}
+/*slider*/
+
+.section1{
+min-height: 122vh;
+overflow: hidden;
+background-color: #f2f2f2;
+display: flex;
+padding-top:20px ;
+
+}
+.section1 img{
+    height: 47%;
+    width: 100hw;
+}
+.card-details {
+    
+    padding: 10px;
+    flex: 1;
+}
+
+.card-details h2 {
+    margin-bottom: 10px;
+    
+}
+
+.card-details p {
+    color: #555;
+}
+
+
+.card-details a {
+    display: inline-block;
+    background-color: #3498db;
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.card-details a:hover {
+    background-color: #2980b9;
+}
+
+/* Apply styles to the iconic section */
+.iconic {
+    text-align: center;
+    margin-top: 20px; /* Adjust the margin as needed */
+}
+
+/* Style the heading within the iconic section */
+.iconic h2 {
+    color: #333; /* Adjust the text color as needed */
+}
+
+/* Style the image within the iconic section */
+.iconic img {
+    width: 100%; /* Set a maximum width if needed */
+    height: auto; /* Maintain the aspect ratio */
+    margin-top: 10px; /* Adjust the margin as needed */
+    border: 1px solid #ddd; /* Add a border for styling */
+    border-radius: 8px; /* Add border-radius for rounded corners */
+}
+/* Apply styles to the explore section */
+.explore {
+    text-align: center;
+    margin-top: 20px; /* Adjust the margin as needed */
+}
+
+/* Style the heading within the explore section */
+.explore h2 {
+    color: #333; /* Adjust the text color as needed */
+}
+
+/* Style the image within the explore section */
+.explore img {
+    width: 100%; /* Make the image fill its container */
+ /* Set a maximum width if needed */
+    height: auto; /* Maintain the aspect ratio */
+    margin-top: 10px; /* Adjust the margin as needed */
+    border: 1px solid #ddd; /* Add a border for styling */
+    border-radius: 8px; /* Add border-radius for rounded corners */
+}
+
+
+ 

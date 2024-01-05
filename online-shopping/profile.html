@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="./profile.css">
+</head>
+<body>
+
+<div class="profile-container">
+    <header>
+        <h3><a href="./index.html">&lt; Back</a></h3>
+        <h1>User Profile</h1>
+        <div class="auth-options">
+            <div class="login" onclick="toggleAuth('login')">Login</div>
+            <div class="signup" onclick="toggleAuth('signup')">Sign Up</div>
+        </div>
+        <div class="edit-profile" onclick="toggleEdit()">Edit Profile</div>
+    </header>
+
+    <section class="profile-info" id="profile-info">
+        <img id="profile-image" src="./image/Mens card/Anouk.png" alt="Profile Image">
+        <div class="user-details">
+            <h2 id="username">shreyash</h2>
+            <p id="user-email">Shreyash123@example.com</p>
+            <p id="user-address">123, Street Name, City</p>
+        </div>
+    </section>
+
+    <section class="edit-form" id="edit-form">
+        <label for="edit-username">Username:</label>
+        <input type="text" id="edit-username" value="shreyash">
+
+        <label for="edit-email">Email:</label>
+        <input type="email" id="edit-email" value="Shreyash123@example.com">
+
+        <label for="edit-address">Address:</label>
+        <input type="text" id="edit-address" value="123, Street Name, City">
+
+        <label for="profile-image-upload">Profile Image:</label>
+        <input type="file" id="profile-image-upload" accept="image/*" onchange="displayImage(this)">
+
+        <button onclick="saveChanges()">Save Changes</button>
+
+        <div class="change-password">
+            <label for="current-password">Current Password:</label>
+            <input type="password" id="current-password">
+
+            <label for="new-password">New Password:</label>
+            <input type="password" id="new-password">
+
+            <label for="confirm-password">Confirm Password:</label>
+            <input type="password" id="confirm-password">
+
+            <button onclick="changePassword()">Change Password</button>
+            <button onclick="savePassword()">Save Password</button>
+        </div>
+    </section>
+</div>
+
+<script>
+    function toggleAuth(action) {
+        alert(`${action} functionality not implemented in this example.`);
+    }
+
+    function toggleEdit() {
+        const profileInfo = document.getElementById('profile-info');
+        const editForm = document.getElementById('edit-form');
+        profileInfo.style.display = profileInfo.style.display === 'none' ? 'flex' : 'none';
+        editForm.style.display = editForm.style.display === 'block' ? 'none' : 'block';
+    }
+
+    function displayImage(input) {
+        const file = input.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                const profileImage = document.getElementById('profile-image');
+                profileImage.src = e.target.result;
+            };
+            reader.readAsDataURL(file);
+        }
+    }
+
+    function saveChanges() {
+        const usernameElement = document.getElementById('username');
+        const emailElement = document.getElementById('user-email');
+        const addressElement = document.getElementById('user-address');
+        const profileImageElement = document.getElementById('profile-image');
+        const editUsername = document.getElementById('edit-username').value;
+        const editEmail = document.getElementById('edit-email').value;
+        const editAddress = document.getElementById('edit-address').value;
+
+        usernameElement.textContent = editUsername;
+        emailElement.textContent = editEmail;
+        addressElement.textContent = editAddress;
+
+        const profileInfo = document.getElementById('profile-info');
+        const editForm = document.getElementById('edit-form');
+        profileInfo.style.display = 'flex';
+        editForm.style.display = 'none';
+    }
+
+    function changePassword() {
+        // Add logic to change the password
+        alert('Password change functionality not implemented in this example.');
+    }
+</script>
+
+</body>
+</html>

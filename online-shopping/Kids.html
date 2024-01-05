@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Shopping for Kids Fashion $ Lifestyles - SMT </title>
+<link rel="stylesheet" href="kids.css">
+<link rel="stylesheet" href="utils.css">
+
+</head>
+<body>
+    <header class="container">
+        <nav class="flex space-between">
+            <div class="left flex items-center ">
+                <a href="./index.html"><img src="./image/youth logo.jpg"></a>
+               
+               <ul class="flex items-center justify-center uppercase">
+                    <li><a href="./Men.html">Men</a> </li>
+                    <li><a href="./Women.html">Women</a> </li>
+                    <li><a href="#">Kids</a> </li>
+                    
+                  </ul>
+                </div>
+            <div class="right flex items-center">
+        <input placeholder="&#128269| Search for product and more" class="searchbar" value="" data-reactid="904" >
+                <div class="profile mx-2"> 
+                    <a href="./profile.html"><img src="./image/user.png" alt="" srcset="">
+                    <div> Profile</div></a></div>
+                <div class="wishlist mx-2">
+                    <a href="./Wishlist.html">  <img src="./image/heart.png" alt=""> 
+                  
+                    <div>WishList</div></a> 
+                </div>
+                <div class="bag mx-2">    
+                   <a href="./shopping_cart.html"> <img src="./image/shopping-bag.png" alt="">            
+            <div>Bag</div></a>
+            </div>
+        </nav>
+    </header>
+    <!-- slide show -->
+
+    <section class="container section1">
+        <div class="slide">
+            <img src="./image/Kids/Kids.png" alt="Card Image">
+            <div class="card-details">
+                <h2>Top Brand 50% Off</h2>
+              <a href="">+Explore</a>       
+            </div>
+        </div>
+        <div class="slide">
+            <img src="./image/Kids/kids weare.png" alt="Card Image">
+            <div class="card-details">
+                <h2>Kids Ware Starting Under Rs.399</h2>
+              <a href="">+Explore</a>       
+            </div>
+        </div>
+        <div class="slide">
+            <img src="./image/Kids/bottom.png" alt="Card Image">
+            <div class="card-details">
+                <h2>T-shirt & bottom Under Rs.399</h2>
+                <a href="#">+ Explore</a>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="./image/Kids/kids girl.png" alt="Card Image">
+            <div class="card-details">
+                <h2>Kids bottom Starting Under Rs.299</h2>
+                
+                <a href="#">+Explore</a>
+            </div>
+        </div>
+   </section>
+   <!-- coupen image -->
+   <section style="display: flex; align-items: center; justify-content: center; ">
+    <h2>FAVOURITE BRANDS</h2><br>
+    <img src="./image/Kids/Brand.png" alt="Coupon Image" style="width: 60%; height: 150px"> 
+</section>
+<section class="iconic">
+    <h2>ICONIC BRANDS</h2>
+    <img src="./image/Kids/iconic brand.png" alt="" srcset="">
+</section>
+<section class="explore">
+    <h2>EXPLORE MORE</h2>
+    <img src="./image/Kids/Exp;ore.png" alt="">
+    <img src="./image/Kids/explore.png" alt="">
+</section>
+
+   
+
+    <script>
+        let currentIndex = 0;
+        const slides = document.querySelectorAll('.section1 > .slide');
+        const totalSlides = slides.length;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                if (i === index) {
+                    slide.style.display = 'block';
+                } else {
+                    slide.style.display = 'none';
+                }
+            });
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            showSlide(currentIndex);
+        }
+
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+            showSlide(currentIndex);
+        }
+
+        // Set interval for automatic slideshow change
+        setInterval(nextSlide, 5000); // Change slide every 5 seconds
+    </script>
+</body>
+</html>

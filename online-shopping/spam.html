@@ -117,7 +117,6 @@ h2 {
  </style>
 </head>
 <body>
-    <p><a href="./index.html">< back</a></p>
     <div class="container">
         <div class="product-details">
           <h1>Product Name</h1>
@@ -130,9 +129,6 @@ h2 {
           <input type="number" id="quantity" min="1" value="1">
           <button onclick="addToCart()">Add to Cart</button>
           <span id="quantity-display">1</span>
-         
-      <button onclick="placeOrder()">Place Order</button> <!-- New button for placing the order -->
-    </div>
         </div>
       </div>
       
@@ -161,23 +157,7 @@ function updateQuantityDisplay() {
   quantityDisplay.textContent = totalQuantity;
 }
   
-function updateQuantityDisplay() {
-  const quantityDisplay = document.getElementById("quantity-display");
-
-  quantityDisplay.textContent = totalQuantity;
-}
-
-function placeOrder() {
-  if (totalQuantity > 0) {
-    // Replace this with your actual order placement logic
-    alert(`Order placed successfully for ${totalQuantity} items!`);
-    totalQuantity = 0; // Reset the total quantity after placing the order
-    updateQuantityDisplay();
-  } else {
-    alert("Your cart is empty. Add items before placing an order.");
-  }
-}
-
+    
     </script>
 </body>
 </html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wishlist</title>
+    <style>body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f7f7f7;
+    }
+    
+    header {
+        background-color: #3498db;
+        color: #fff;
+        padding: 15px;
+        text-align: center;
+    }
+    
+    .back-link {
+        color: #fff;
+        text-decoration: none;
+        margin-left: 20px;
+        font-size: 16px;
+    }
+    
+    .wishlist-container {
+        max-width: 800px;
+        margin: 20px auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    
+    .wishlist-item {
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        margin: 15px;
+        padding: 15px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 250px;
+    }
+    
+    .wishlist-item img {
+        width: 100%;
+        border-radius: 8px;
+        margin-bottom: 10px;
+    }
+    
+    .item-details h2 {
+        margin: 0;
+    }
+    
+    .item-details p {
+        margin: 5px 0;
+    }
+    
+    button {
+        background-color: #e74c3c;
+        color: #fff;
+        border: none;
+        padding: 8px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+    
+    button:hover {
+        background-color: #c0392b;
+    }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>My Wishlist</h1>
+        <a href="./index.html" class="back-link">Back to Shopping</a>
+    </header>
+
+    <div class="wishlist-container">
+        <div class="wishlist-item" id="item1">
+            <img src="./image/Mens card/Anouk.png" alt="Product 1">
+            <div class="item-details">
+                <p>Product 1</p>
+                <p>Price: Rs.399</p>
+                <button onclick="removeFromWishlist('item1')">Remove</button>
+            
+            </div>
+        </div>
+
+        <div class="wishlist-item" id="item2">
+            <img src="./image/Mens card/Bushirt.png" alt="Product 2">
+            <div class="item-details">
+                <p>Product 2</p>
+                <p>Price: Rs.275</p>
+                <button onclick="removeFromWishlist('item2')">Remove</button>
+            </div>
+        </div>
+
+     
+
+    </div>
+
+    <script >
+        let itemIdCounter = 1;
+
+function addToWishlist() {
+    const container = document.querySelector('.wishlist-container');
+    
+    const newItem = document.createElement('div');
+    newItem.className = 'wishlist-item';
+    newItem.id = 'item' + itemIdCounter;
+
+    const itemContent = `
+        <img src="product.jpg" alt="Product">
+        <div class="item-details">
+            <h2>Product ${itemIdCounter}</h2>
+            <p>Price: $50</p>
+            <button onclick="removeFromWishlist('item${itemIdCounter}')">Remove</button>
+        </div>
+    `;
+
+    newItem.innerHTML = itemContent;
+    container.appendChild(newItem);
+
+    itemIdCounter++;
+}
+
+function removeFromWishlist(itemId) {
+    const item = document.getElementById(itemId);
+    if (item) {
+        item.remove();
+    }
+}
+
+    </script>
+</body>
+</html>
