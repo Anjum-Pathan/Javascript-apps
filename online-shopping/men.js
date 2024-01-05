@@ -27,6 +27,53 @@ function MultiselectDropdown(options){
     return e;
   }
 
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  // Get all the filter checkboxes
+  var categoryCheckboxes = document.querySelectorAll('input[name="category"]');
+  var priceCheckboxes = document.querySelectorAll('input[name="price"]');
+  var discountCheckboxes = document.querySelectorAll('input[name="discount"]');
+
+  // Function to update the displayed products based on selected filters
+  function updateProducts() {
+    // Get selected values from checkboxes
+    var selectedCategories = Array.from(categoryCheckboxes)
+      .filter(checkbox => checkbox.checked)
+      .map(checkbox => checkbox.value);
+
+    var selectedPrices = Array.from(priceCheckboxes)
+      .filter(checkbox => checkbox.checked)
+      .map(checkbox => checkbox.value);
+
+    var selectedDiscounts = Array.from(discountCheckboxes)
+      .filter(checkbox => checkbox.checked)
+      .map(checkbox => checkbox.value);
+
+    // Implement your logic to filter products based on selected values
+    // For now, let's just log the selected values to the console
+    console.log('Selected Categories:', selectedCategories);
+    console.log('Selected Prices:', selectedPrices);
+    console.log('Selected Discounts:', selectedDiscounts);
+  }
+
+  // Attach event listeners to checkboxes
+  categoryCheckboxes.forEach(function (checkbox) {
+    checkbox.addEventListener('change', updateProducts);
+  });
+
+  priceCheckboxes.forEach(function (checkbox) {
+    checkbox.addEventListener('change', updateProducts);
+  });
+
+  discountCheckboxes.forEach(function (checkbox) {
+    checkbox.addEventListener('change', updateProducts);
+  });
+});
+
+
+
   
   document.querySelectorAll("select[multiple]").forEach((el,k)=>{
     
